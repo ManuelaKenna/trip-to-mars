@@ -1,5 +1,5 @@
 var dailyURL = "";
-var backup = "backup.jpg";
+var backup = "assets/backup.jpg";
 // Stock background
 $("html").css("background-image", "url(" + backup + ")").css("height", "100%").css("background-position", "center").css("background-repeat", "no-repeat").css("background-size", "cover");
 // Fetch APOD background
