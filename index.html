@@ -20,28 +20,20 @@
 </head>
 <body class="container">
 <!--HTML dropdown -->
- <!-- Dropdown Trigger -->
- <a href="#" data-trigger="dropdown" 
- class="btn orange accent-1 dropdown-trigger">Pick your vessel</a>
-
-    <ul class="dropdown-content" id="dropdown">
-        <li >
-            <a href="#" id="one">one</a>
-        </li>
-        <li >
-            <a href="#" id="two">two</a>
-        </li>
-        <li >
-            <a href="#" id="three">three</a>
-        </li>
-        <li>
-            <a href="#" id="random">random</a>
-        </li>
-    </ul>
-
-    <div class="spaceShip">Spaceship
-        <p></p>
-    </div>
+<h2>Pick your Starship</h2>
+<div class="spaceShip">
+    <img id="startShipImg" src="https://images.unsplash.com/photo-1587279485070-47f85a2bd5ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"></img>
+</div>
+<form action="/action_page.php">
+    <input list="browsers" name="browser">
+    <datalist id="browsers">
+      <option value="Starship1">
+      <option value="Starship2">
+      <option value="Starship3">
+      <option value="Starship4">
+    </datalist>
+    <input type="submit">
+  </form>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="text/javascript" src="./materialize/js/materialize.min.js"></script>

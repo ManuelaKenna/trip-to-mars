@@ -1,17 +1,4 @@
-//drop down trigger for picking your starship//
 
-document.addEventListener('DOMContentLoaded',function(){
-  var drop = document.querySelectorAll(".dropdown-trigger")
-  M.Dropdown.init(drop,{
-    coverTrigger:false,
-    closeOnClick:false,
-    hover:true,
-    inDuration:400
-
-  })
-
-  
-})
 
 //Starship API call//
 var starShip= "https://swapi.dev/api/starships"
@@ -27,10 +14,11 @@ fetch(starShip)
     console.log(data);
     
 })
+
 //manipulates the dom and adds text content to HTML
 .then(function (results) {
   console.log(results);
-  document.querySelector(".spaceShip").innerHTML = results[0].name.model;
+  // document.querySelector(".spaceShip").innerHTML = results.name.model;
 
 })
 
@@ -44,6 +32,7 @@ function appendCongrats(){
  $(".congrats-page").append(txt1,txt2,txt3);
 
 }
+//text 1: Congrats User you reached your goal!
 
 // $(function(){
 //   $('img').each(function(e){
@@ -54,4 +43,3 @@ function appendCongrats(){
 //       $(this).attr('src', src);
 //     });
 //   });
-// })
