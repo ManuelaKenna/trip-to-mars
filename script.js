@@ -2,7 +2,7 @@
 var dailyURL = "";
 var backup = "assets/images/backup.jpg";
 // Stock background
-$("html").css("background-image", "url(" + backup + ")").css("height", "100%").css("background-position", "center").css("background-repeat", "no-repeat").css("background-size", "cover");
+$("html").css("background-image", "url(" + backup + ")").css("height", "100%").css("background-position", "center").css("background-repeat", "no-repeat").css("background-size", "cover").css("object-fit","cover");
 // Fetch APOD background
 fetch('https://api.nasa.gov/planetary/apod?api_key=UYBHJ04Q9lLfBjmou4hJQs8ZUPsR0OrRHdvJxaHC')
     .then(function (response) {
@@ -12,14 +12,14 @@ fetch('https://api.nasa.gov/planetary/apod?api_key=UYBHJ04Q9lLfBjmou4hJQs8ZUPsR0
         dailyURL = data.hdurl;
     })
     .then(function () {
-        $("html").css("background-image", "url(" + dailyURL + ")").css("height", "100%").css("background-position", "center").css("background-repeat", "no-repeat").css("background-size", "cover");
+        $("html").css("background-image", "url(" + dailyURL + ")").css("height", "100%").css("object-fit","cover").css("width","100%").css("background-position", "center").css("background-repeat", "no-repeat").css("background-size", "cover");
 })
 
 
-
+// Declaring/defining variables for progress bar
 var htmlString = "";
-var goalDays = 5; // Local storage from previous
-var dayCurrent = 4; // Local storage from previous
+var goalDays = 8; // Change to local storage from previous
+var dayCurrent = 2; // Change to local storage from previous
 
 // Adding Earth at the beginning
 $(`#timeline`).append(`<img id="EarthImg" src="assets/images/Earth.jpg" />`);
@@ -33,16 +33,15 @@ for (let c = 0; c < goalDays; c++) {
 // Adding htmlstring that has all the divs into timeline id
 $(`#timeline`).append(htmlString);
 
-// Adding filled to all boxes before current day
+// For loop to go over each day before current day and fill circle
+for (let c = 0; c < dayCurrent; c++) {
+  $(`#box${c}`).css("background-color","black");
+  
+}
 
-
-// Ask about this box # string literal  $('#box${dayCurrent}').append(`<img id="roverImg" src="assets/images/rover.png" />`)
 // Adding Rover picture over current day
 $(`#box${dayCurrent}`).append(`<img id="roverImg" src="assets/images/rover.png" />`)
 $(`#box${dayCurrent}`).children().css("height","4rem").css("width","4rem").css("position","absolute").css("top","-5rem").css("left","0rem");
-
-
-
 
 // Adding Mars at the end
 $(`#timeline`).append(`<img id="MarsImg" src="assets/images/Mars.jpg" />`);
@@ -51,7 +50,7 @@ $('#timeline').children([1]).css("height","4rem").css("width","4rem").css("2px",
 
 
 
-
+// Messing with local variable
 
 // // Button to give extra info on background image
 // $( "#btn4" ).click(function() {
