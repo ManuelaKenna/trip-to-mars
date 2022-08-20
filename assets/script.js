@@ -2,13 +2,13 @@ const starshipBtn = document.querySelector("#submitShipBtn");
 
 const starRadioBtns = document.querySelectorAll('input[name="goalship"]');
 
-starRadioBtns.addEventListener("click",() => {
+starRadioBtns.addEventListener("click", () => {
   console.log("hello")
   let selectedShip;
 
-  for(const radioBtn of starRadioBtns) {
+  for(const radioButton of starRadioBtns) {
 
-    if (radioButton.checked){
+    if (radioButton.checked) {
       selectedShip = radioButton.value;
       break;
     }
