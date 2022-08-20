@@ -31,7 +31,7 @@
     <p>
       <label>
         <input 
-        id="star-destroyer" name="group1" 
+        id="star-destroyer" name="goalship" 
         type="radio" 
         value="a" checked />
         <span>Star Destroyer</span>
@@ -40,7 +40,7 @@
     <p>
       <label>
         <input id="millennium-falcon"
-        name="group1" 
+        name="goalship" 
         type="radio" 
         value="b"/>
         <span>Millennium Falcon</span>
@@ -50,17 +50,19 @@
       <label>
         <input 
         id="executor" 
-        name="group1" 
+        name="goalship" 
         type="radio" 
         value="a"/>
         <span>Executor</span>
       </label>
     </p>
-    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <button class="btn waves-effect waves-light" type="submit" name="action" id="startshipBtn">Submit
         <i class="material-icons right">send</i>
       </button>
   </form>
+  <div id="output"></div>
 </div>
+
 <div class="congrats" id="goalComplete"></div>
 
 
