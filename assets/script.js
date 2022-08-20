@@ -16,10 +16,11 @@ fetch(starShip)
     console.log(wookie);
     starData = wookie.results[0].name;
     console.log(starData);
-    const options = document.getElementById('browsers')
-    console.log(options)
-    $(`#browsers`).children([0]).text(starData);
+  
+    
 });
+
+var modelShip = addEventListener(onclick)
 
 // //manipulates the dom and adds text content to HTML
 // .then(function (results) {
