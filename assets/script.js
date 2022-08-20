@@ -13,13 +13,11 @@ fetch(starShip)
 //manipulates the dom and adds text content to HTML
 .then(function(wookie){
     console.log(wookie);
-    starData = wookie.results[0].name.model;
-    console.log(starData);
+    modelShip = wookie.results[0].name.model;
+    console.log(modelShip);
   
     
 });
-
-
 
 
 const starshipBtn = document.querySelector("#submitShipBtn");
