@@ -1,4 +1,4 @@
-var modelShip = document.querySelector ("#star-destroyer");
+var modelShip = "";
 
 //Starship API call//
 var starShip= "https://swapi.dev/api/starships";
@@ -40,27 +40,3 @@ starRadioBtns.addEventListener("click", () => {
   output.innerText = selectedShip ? `you selected ${selectedShip}${modelShip}`:
 
 });
-
-  
-
-
-// var modelShip = document.querySelector ("#star-destroyer");
-
-// //Starship API call//
-// var starShip= "https://swapi.dev/api/starships";
-
-// var starData = "";
-
-// fetch(starShip)
-// .then (function(response){
-
-//     return response.json();
-// })
-// //manipulates the dom and adds text content to HTML
-// .then(function(wookie){
-//     console.log(wookie);
-//     starData = wookie.results[0].name;
-//     console.log(starData);
-  
-    
-// });
