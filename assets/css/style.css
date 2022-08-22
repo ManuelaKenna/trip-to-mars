@@ -44,3 +44,22 @@ body {
 #filled {
     background-color: black;
 }
+
+#finishedBox {
+    margin: 6rem;
+    background-color: darkslateblue;
+}
+
+#welcome1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+}
+
+#restart1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+}

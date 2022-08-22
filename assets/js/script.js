@@ -13,6 +13,8 @@ goalName = localStorage.getItem('goalName');
 goalTimeline = localStorage.getItem('goalTimeline');
 shipType = localStorage.getItem('shipType');
 
+
+
 // Background image function
 function setBackground() {
   // Declaring/defining variables for background images
@@ -24,17 +26,17 @@ function setBackground() {
   "object-fit":"cover","width":"100%","background-position":"center","background-repeat":"no-repeat","background-size": "cover"});
 
   // Fetch APOD background and set to page
-  // fetch('https://api.nasa.gov/planetary/apod?api_key=UYBHJ04Q9lLfBjmou4hJQs8ZUPsR0OrRHdvJxaHC')
-  //     .then(function (response) {
-  //         return response.json();
-  //     })
-  //     .then(function (data) {
-  //         dailyURL = data.hdurl;
-  //     })
-  //     .then(function () {
-  //         $("html").css({"background-image":"url(" + dailyURL + ")","height":"100%",
-  //         "object-fit":"cover","width":"100%","background-position":"center","background-repeat":"no-repeat","background-size": "cover"});
-  // })
+  fetch('https://api.nasa.gov/planetary/apod?api_key=UYBHJ04Q9lLfBjmou4hJQs8ZUPsR0OrRHdvJxaHC&date=2022-08-21')
+      .then(function (response) {
+          return response.json();
+      })
+      .then(function (data) {
+          dailyURL = data.hdurl;
+      })
+      .then(function () {
+          $("html").css({"background-image":"url(" + dailyURL + ")","height":"100%",
+          "object-fit":"cover","width":"100%","background-position":"center","background-repeat":"no-repeat","background-size": "cover"});
+  })
 
 }
 setBackground();
@@ -65,7 +67,11 @@ function setOnClicks () {
     console.log(shipType);
   });
   $(`#swapHTML`).click(function() {
-    window.location = "file:///C:/Users/kidsp/UW-Project1/trip-to-mars/index.html"
+    window.location = "file:///C:/Users/kidsp/UW-Project1/trip-to-mars/progress.html"
+  });
+
+  $(`#restart`).click(function() {
+    window.location = "file:///C:/Users/kidsp/UW-Project1/trip-to-mars/intro.html"
   });
 
   $(`#goalYesNo`).children().click(function() {
@@ -137,3 +143,52 @@ function setProgressBar(day) {
 }
 setProgressBar(1);
 
+// // Intro form stuff
+// function introFormStuff () {
+//   $(document).ready(function() {
+//     M.updateTextFields();
+//   });
+        
+//   $('#textarea1').val('New Text');
+//   M.textareaAutoResize($('#textarea1'));
+  
+//   document.addEventListener('DOMContentLoaded', function() {
+//     var elems = document.querySelectorAll('select');
+//     var instance = M.FormSelect.init(elems, options);
+//     instance.getSelectedValues();
+//   });
+  
+//   $(document).ready(function(){
+//     $('.modal').modal();
+//     $('.dropdown-trigger').dropdown();
+//   });
+  
+//   $(document).ready(function(){
+//     $('select').formSelect();
+//   });
+  
+//   var instance = M.FormSelect.getInstances(elem);
+  
+//   instance.getSelectedValues();
+  
+// }
+// introFormStuff();
+
+function introInput() {
+  // Get ids for input fields and make variables on submit click function
+  $(`#submitBtn1`).click(function() {
+    var tempFirstName = $(`#first_name`).val();
+    localStorage.setItem('firstName', tempFirstName);
+    
+    var tempGoalName = $(`#goal_name`).val();
+    localStorage.setItem('goalName', tempGoalName);
+
+    var tempGoalTimeline = $(`#goal_timeline`).val();
+    localStorage.setItem('goalTimeline', tempGoalTimeline);
+
+    window.location = "file:///C:/Users/kidsp/UW-Project1/trip-to-mars/progress.html";
+
+  });
+
+}
+introInput();
