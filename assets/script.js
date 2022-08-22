@@ -27,26 +27,39 @@
 //                     return modelData.json();
 //                 })
 //     })
-var modelData = "bigversion";
+var modelData = "";
+
 //Starship API call//
+
 var starShip = "https://swapi.dev/api/starships/";
 
 var starData = "";
 
+function fetchStartship(modelNumber) {
 fetch(starShip)
 .then (function(response){
 
     return response.json();
 })
+
 //manipulates the dom and adds text content to HTML//
+
 .then(function(wookie){
     console.log(wookie);
-    modelData = wookie.results[0].name.model;
+    modelData = wookie.results[modelNumber].model;
     console.log(modelData);
   
     
 });
+}
+  // star destroyer = 1 , MF = 4 , Executor = 8
+fetchStartship() 
+    // var selectMf = wookie.results[4].model;
+    // var selectEx = wookie.results[8].model;
+    // var selectSd = wookie.results[1].model;
+    // console.log(fetchStartship);
 
+//display inner HTML data under the radio buttons//
 function displayStarship() {
   document.getElementById("output").innerHTML = "";
   var starshipEl = document.getElementsByTagName('input');
@@ -58,7 +71,7 @@ function displayStarship() {
         
           if(starshipEl[i].checked)
               document.getElementById("output").innerHTML
-                      += "You Selected: "+ starshipEl[i].value + " Model: "+ modelData;
+                      += "You Selected: "+ starshipEl[i].value + " Model: ";
 
               // if(starshipEl[i].unchecked)
 
@@ -66,4 +79,4 @@ function displayStarship() {
   }
 }
 
-// + " Model: "+ modelData
+// (selectMf,selectEx,selectSd)

@@ -1,4 +1,4 @@
-//congrats Javascrip//
+//congrats Javascript//
 var congratsPage = document.getElementById("#goalComplete");
 
 var congratsEl = document.createElement("h1");
