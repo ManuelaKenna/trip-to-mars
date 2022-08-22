@@ -18,6 +18,39 @@
 </head>
 
 <body>
+
+    <!--HTML dropdown -->
+    <h2>Pick your Starship</h2>
+
+    <div class="spaceShip">
+        <img id="startShipImg" src="https://images.unsplash.com/photo-1587279485070-47f85a2bd5ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"></img>
+    </div>
+    <!--Radio buttons-->
+    <div class="radioBtn" id="starShipBtn">
+        <p>
+        <label>
+            <input id="choice-a" type="radio" name="Star-Destroyer" value="Star-Destroyer"/>
+            <span>Star Destroyer</span>
+        </label>
+        </p>
+        <p>
+        <label>
+            <input id="choice-b" type="radio" name="Millennium-Falcon" value="Millennium-Falcon"/>
+            <span>Millennium Falcon</span>
+        </label>
+        </p>
+        <p>
+        <label>
+            <input id="choice-c" type="radio" name="Executor" value="Executor"/>
+            <span>Executor</span>
+        </label>
+        </p>
+    </div>
+
+    <!--Radio submit button-->
+    <button type="button" value ="submit" onclick="displayStarship();">
+        Submit
+    </button>
     <h1>Embark on your trip to Mars!</h1>
     <div class="row">
         <form class="col s12">
@@ -58,38 +91,7 @@
         <i class="material-icons right">send</i>
     </button>
 
-        <!--HTML dropdown -->
-    <h2>Pick your Starship</h2>
-
-    <div class="spaceShip">
-        <img id="startShipImg" src="https://images.unsplash.com/photo-1587279485070-47f85a2bd5ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"></img>
-    </div>
-    <!--Radio buttons-->
-    <div class="radioBtn" id="starShipBtn">
-        <p>
-        <label>
-            <input id="choice-a" type="radio" name="Star-Destroyer" value="Star-Destroyer"/>
-            <span>Star Destroyer</span>
-        </label>
-        </p>
-        <p>
-        <label>
-            <input id="choice-b" type="radio" name="Millennium-Falcon" value="Millennium-Falcon"/>
-            <span>Millennium Falcon</span>
-        </label>
-        </p>
-        <p>
-        <label>
-            <input id="choice-c" type="radio" name="Executor" value="Executor"/>
-            <span>Executor</span>
-        </label>
-        </p>
-    </div>
-
-    <!--Radio submit button-->
-    <button type="button" value ="submit" onclick="displayStarship();">
-        Submit
-    </button>
+        
 
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="./materialize/js/materialize.min.js"></script>
