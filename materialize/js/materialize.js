@@ -12371,4 +12371,8 @@ $jscomp.polyfill = function (e, r, p, m) {
   }
 
   Range.init($('input[type=range]'));
+<<<<<<< HEAD
 })(cash, M.anime);
+=======
+})(cash, M.anime);
+>>>>>>> main
