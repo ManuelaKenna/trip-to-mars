@@ -71,7 +71,7 @@ function setOnClicks () {
   });
 
   $(`#restart`).click(function() {
-    window.location = "file:///C:/Users/kidsp/UW-Project1/trip-to-mars/intro.html"
+    window.location = "file:///C:/Users/kidsp/UW-Project1/trip-to-mars/index.html"
   });
 
   $(`#goalYesNo`).children().click(function() {
