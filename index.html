@@ -18,6 +18,7 @@
     
 
 </head>
+
 <body class="dataShip">
    
    
@@ -28,30 +29,31 @@
     <img id="startShipImg" src="https://images.unsplash.com/photo-1587279485070-47f85a2bd5ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"></img>
 </div>
 <!--Radio buttons-->
-<div class="radioBTN">
+<div class="radioBtn" id="starShipBtn">
     <p>
       <label>
-        <input type="radio" name="goalShip" value="Star-Destroyer" checked />
+        <input id="choice-a" type="radio" name="Star-Destroyer" value="Star-Destroyer"/>
         <span>Star Destroyer</span>
       </label>
     </p>
     <p>
       <label>
-        <input type="radio" name="goalShip" value="Millennium-Falcon"/>
+        <input id="choice-b" type="radio" name="Millennium-Falcon" value="Millennium-Falcon"/>
         <span>Millennium Falcon</span>
       </label>
     </p>
     <p>
       <label>
-        <input type="radio" name="goalShip" value="Executor"/>
+        <input id="choice-c" type="radio" name="Executor" value="Executor"/>
         <span>Executor</span>
       </label>
     </p>
-    </div>
+</div>
+
     <!--Radio submit button-->
-    <button class="btn waves-effect waves-light" type="button" 
-    onclick="displayStarship()">Submit
-      </button>
+    <button type="button" value ="submit" onclick="displayStarship();">
+        Submit
+    </button>
 
       <!--Javascript output div-->
 

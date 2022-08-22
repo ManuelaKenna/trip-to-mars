@@ -1,7 +1,35 @@
-var modelShip = "";
+// $(document).ready(function () {
+//   $("#starShipBtn").submit(function (event) {
+//       selectStarShip(event);
 
+//   });
+// });
+
+// function selectStarShip(event) {
+//   console.log(document.getElementById("starShipBtn").value)
+//   const requestUrl = `https://swapi.dev/api/starships/direct?i=${document.getElementById("starShipBtn").value}`
+// }
+
+// fetch(requestUrl)
+//     .then(function(response){
+//       //Converts to JSON
+//       console.log(response)
+//       return response.json();
+
+//     })
+    
+//     .then(function(results){
+//       console.log(results);
+//           fetch (`https://swapi.dev/api/starships/onecall?model=${results[0].name.model}`)
+//                 .then(function(modelData) {
+//                     //converts to JSON 
+//                     console.log(modelData)
+//                     return modelData.json();
+//                 })
+//     })
+var modelData = "bigversion";
 //Starship API call//
-var starShip= "https://swapi.dev/api/starships";
+var starShip = "https://swapi.dev/api/starships/";
 
 var starData = "";
 
@@ -13,14 +41,11 @@ fetch(starShip)
 //manipulates the dom and adds text content to HTML//
 .then(function(wookie){
     console.log(wookie);
-    modelShip = wookie.results[0].name.model;
-    console.log(modelShip);
+    modelData = wookie.results[0].name.model;
+    console.log(modelData);
   
     
 });
-
-
-// const starshipBtn = document.querySelector("#submitShipBtn");
 
 function displayStarship() {
   document.getElementById("output").innerHTML = "";
@@ -29,11 +54,16 @@ function displayStarship() {
   for(i = 0; i < starshipEl.length; i++) {
         
       if(starshipEl[i].type="radio") {
+        console.log(starshipEl[i])
         
           if(starshipEl[i].checked)
               document.getElementById("output").innerHTML
-                      += starshipEl[i].name + " Value: "
-                      + modelShip[i].value + "<br>" ;
+                      += "You Selected: "+ starshipEl[i].value + " Model: "+ modelData;
+
+              // if(starshipEl[i].unchecked)
+
       }
   }
 }
+
+// + " Model: "+ modelData
