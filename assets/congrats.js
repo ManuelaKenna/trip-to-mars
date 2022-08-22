@@ -3,7 +3,7 @@ var congratsPage = document.getElementById("#goalComplete");
 
 var congratsEl = document.createElement("h1");
 
-congratsEl.textContent = "Congratulations you reached your goal!";
+congratsEl.textContent = "Congratulations!!" + "You reached your goal!";
 
-congratsEl.classname = ""
+
 

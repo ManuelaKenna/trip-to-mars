@@ -10,7 +10,7 @@ fetch(starShip)
 
     return response.json();
 })
-//manipulates the dom and adds text content to HTML
+//manipulates the dom and adds text content to HTML//
 .then(function(wookie){
     console.log(wookie);
     modelShip = wookie.results[0].name.model;
@@ -20,21 +20,20 @@ fetch(starShip)
 });
 
 
-const starshipBtn = document.querySelector("#submitShipBtn");
+// const starshipBtn = document.querySelector("#submitShipBtn");
 
-const starRadioBtns = document.querySelectorAll('input[name="goalship"]');
-
-starRadioBtns.addEventListener("click", () => {
-  console.log("hello")
-  let selectedShip;
-
-  for(const radioButton of starRadioBtns) {
-
-    if (radioButton.checked) {
-      selectedShip = radioButton.value;
-      break;
-    }
+function displayStarship() {
+  document.getElementById("output").innerHTML = "";
+  var starshipEl = document.getElementsByTagName('input');
+    
+  for(i = 0; i < starshipEl.length; i++) {
+        
+      if(starshipEl[i].type="radio") {
+        
+          if(starshipEl[i].checked)
+              document.getElementById("output").innerHTML
+                      += starshipEl[i].name + " Value: "
+                      + modelShip[i].value + "<br>" ;
+      }
   }
-  output.innerText = selectedShip ? `you selected ${selectedShip}${modelShip}`:
-
-});
+}

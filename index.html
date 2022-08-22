@@ -23,45 +23,42 @@
    
 <!--HTML dropdown -->
 <h2>Pick your Starship</h2>
+
 <div class="spaceShip">
     <img id="startShipImg" src="https://images.unsplash.com/photo-1587279485070-47f85a2bd5ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"></img>
 </div>
+<!--Radio buttons-->
 <div class="radioBTN">
-<form action="#">
     <p>
       <label>
-        <input 
-        id="star-destroyer" name="goalship" 
-        type="radio" 
-        value="a" checked />
+        <input type="radio" name="goalShip" value="Star-Destroyer" checked />
         <span>Star Destroyer</span>
       </label>
     </p>
     <p>
       <label>
-        <input id="millennium-falcon"
-        name="goalship" 
-        type="radio" 
-        value="b"/>
+        <input type="radio" name="goalShip" value="Millennium-Falcon"/>
         <span>Millennium Falcon</span>
       </label>
     </p>
     <p>
       <label>
-        <input 
-        id="executor" 
-        name="goalship" 
-        type="radio" 
-        value="a"/>
+        <input type="radio" name="goalShip" value="Executor"/>
         <span>Executor</span>
       </label>
     </p>
-    <button class="btn waves-effect waves-light" type="submit" name="action" id="startshipBtn">Submit
-        <i class="material-icons right">send</i>
+    </div>
+    <!--Radio submit button-->
+    <button class="btn waves-effect waves-light" type="button" 
+    onclick="displayStarship()">Submit
       </button>
-  </form>
+
+      <!--Javascript output div-->
+
   <div id="output"></div>
 </div>
+
+<!--Div for the congrats page to populate when the goal is completed-->
 
 <div class="congrats" id="goalComplete"></div>
 
