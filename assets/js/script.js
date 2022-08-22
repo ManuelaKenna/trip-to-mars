@@ -143,7 +143,6 @@ function setProgressBar(day) {
 }
 setProgressBar(1);
 
-
 function introInput() {
   // Get ids for input fields and make variables on submit click function
   $(`#submitBtn1`).click(function() {
