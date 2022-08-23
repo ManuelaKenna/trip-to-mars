@@ -2,6 +2,10 @@ body {
     margin-top: 15rem;
     padding-bottom: 1em;
 }
+main {
+    background-color: whitesmoke;
+    margin-top: -2em;
+}
 body h1 {
     text-align: center;
 }
@@ -15,6 +19,13 @@ main {
 }
 #intro-form {
     margin: 5em;
+}
+
+#restart {
+    border-radius: 8px;
+    padding: 10px;
+    color: whitesmoke;
+    background-color: black;
 }
 
 
@@ -34,11 +45,18 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2em;
+}
+#yes {
+    border-radius: 8px;
+    padding: 10px 20px 10px 20px;
+    color: whitesmoke;
+    background-color: black;
+
 }
 
 
 #fullBox {
-    margin: 6rem;
     background-color: darkslateblue;
 }
 
@@ -69,7 +87,7 @@ main {
     margin-bottom: -1em;
 }
 #finishedBox img {
-    width: 30%;
+    width: 40%;
     margin-bottom: 2em;
 }
 
@@ -90,11 +108,11 @@ main {
 
 /* Past this point causes css anomalys */
 
-body {
+/* body {
     box-sizing: border-box;
     background-color: whitesmoke;
     justify-content:center;
-}
+} */
 
 h2 {
     display:flex;
