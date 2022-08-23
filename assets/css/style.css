@@ -1,6 +1,33 @@
 body {
     margin-top: 15rem;
+    padding-bottom: 1em;
 }
+main {
+    background-color: whitesmoke;
+    margin-top: -2em;
+}
+body h1 {
+    text-align: center;
+}
+main {
+ margin: 6em 6em 0 6em ;
+ padding-top: 1.5em;
+}
+
+#starship-pick {
+    margin: 5em;
+}
+#intro-form {
+    margin: 5em;
+}
+
+#restart {
+    border-radius: 8px;
+    padding: 10px;
+    color: whitesmoke;
+    background-color: black;
+}
+
 
 #goalTitle {
     display: flex;
@@ -18,11 +45,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2em;
+}
+#yes {
+    border-radius: 8px;
+    padding: 10px 20px 10px 20px;
+    color: whitesmoke;
+    background-color: black;
+
 }
 
 
 #fullBox {
-    margin: 6rem;
     background-color: darkslateblue;
 }
 
@@ -46,14 +80,22 @@ body {
 }
 
 #finishedBox {
-    margin: 6rem;
-    background-color: darkslateblue;
+    padding: 2em;
+    background-color: grey;
+}
+#finishedBox h1 {
+    margin-bottom: -1em;
+}
+#finishedBox img {
+    width: 40%;
+    margin-bottom: 2em;
 }
 
 #welcome1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     font-size: larger;
 }
 
@@ -66,11 +108,11 @@ body {
 
 /* Past this point causes css anomalys */
 
-body {
+/* body {
     box-sizing: border-box;
     background-color: whitesmoke;
     justify-content:center;
-}
+} */
 
 h2 {
     display:flex;

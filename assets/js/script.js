@@ -67,18 +67,18 @@ function setOnClicks () {
     console.log(shipType);
   });
   $(`#swapHTML`).click(function() {
-    window.location = "file:///C:/Users/kidsp/UW-Project1/trip-to-mars/progress.html"
+    window.location = "progress.html"
   });
 
   $(`#restart`).click(function() {
-    window.location = "file:///C:/Users/kidsp/UW-Project1/trip-to-mars/index.html"
+    window.location = "index.html"
   });
 
   $(`#goalYesNo`).children().click(function() {
     setProgressBar(currentGoalDay);
     setProgressPage();
     if (currentGoalDay > goalTimeline) {
-      window.location = "file:///C:/Users/kidsp/UW-Project1/trip-to-mars/finish.html";
+      window.location = "finish.html";
       currentGoalDay = 1;
     }
   });
@@ -155,10 +155,17 @@ function introInput() {
     var tempGoalTimeline = $(`#goal_timeline`).val();
     localStorage.setItem('goalTimeline', tempGoalTimeline);
 
-    window.location = "file:///C:/Users/kidsp/UW-Project1/trip-to-mars/progress.html";
+    window.location = "progress.html";
 
   });
 
 }
 introInput();
 
+
+//congrats Javascript//
+var congratsPage = document.getElementById("#goalComplete");
+
+var congratsEl = document.createElement("h1");
+
+congratsEl.textContent = "Congratulations!!" + "You reached your goal!";
