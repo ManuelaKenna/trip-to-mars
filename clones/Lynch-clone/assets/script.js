@@ -17,7 +17,7 @@
 //       return response.json();
 
 //     })
-    
+
 //     .then(function(results){
 //       console.log(results);
 //           fetch (`https://swapi.dev/api/starships/onecall?model=${results[0].name.model}`)
@@ -27,50 +27,80 @@
 //                     return modelData.json();
 //                 })
 //     })
-var modelData = "";
+let modelData = "";
 //Starship API call//
+const p = document.getElementById("output");
 var starShip = "https://swapi.dev/api/starships/";
 
 var starData = "";
 
-function fetchStartship(modelNumber) {
-  fetch(starShip)
-  .then (function(response){
+async function fetchStartship(modelNumber) {
+  await fetch(starShip + modelNumber)
+    .then(function (response) {
 
       return response.json();
-  })
+    })
 
-  // star destroyer = 1 , MF = 4 , Executor = 8
+    // star destroyer = 3 , MF = 4 , Executor = 8
 
-  //manipulates the dom and adds text content to HTML//
-  .then(function(wookie){
+    //manipulates the dom and adds text content to HTML//
+    .then(function (wookie) {
       console.log(wookie);
-      modelData = wookie.results[modelNumber].model;
+      let {model} = wookie;
+      modelData = model;
       console.log(modelData);
-    
-      
-  });
-  }
-fetchStartship(4);
+      return modelData;
 
-function displayStarship() {
+    });
+  
+}
+
+async function displayStarship() {
   document.getElementById("output").innerHTML = "";
   var starshipEl = document.getElementsByTagName('input');
   console.log(starshipEl);
-    
-  for(i = 0; i < starshipEl.length; i++) {
-        
-      if(starshipEl[i].type="radio") {
-        console.log(starshipEl[i])
-        
-          if(starshipEl[i].checked)
-              document.getElementById("output").innerHTML
-                      += "You Selected: "+ starshipEl[i].value + " Model: "+ modelData;
 
-              // if(starshipEl[i].unchecked)
 
+  for (i = 0; i < starshipEl.length; i++) {
+
+    if (starshipEl[i].type = "radio") {
+      // console.log(starshipEl[i].value)
+
+      if (starshipEl[i].checked === true){
+      // console.log(starshipEl[i].value)
+      //   console.log(starshipEl[i].checked === true)
+      switch (starshipEl[i].value) {
+        case "Star-Destroyer":
+          console.log("SD")
+          await fetchStartship(3);
+          break;
+
+        case "Millennium-Falcon":
+          console.log("MF")
+          await fetchStartship(11);
+          break;
+
+        case "Executor":
+          console.log("E")
+          await fetchStartship(15);
+          break;
+
+        default:
+          return
+          break;
       }
+      // fetchStartship();
+      const starship = starshipEl[i].value
+      console.log(modelData)
+      await model(starship, modelData)
+      
+      
+    }
+
+    }
   }
 }
 
-// + " Model: "+ modelData
+const model = async (param1, param2) => {
+  p.innerHTML = `You Selected: ${param1} Model: ${param2}`;
+}
