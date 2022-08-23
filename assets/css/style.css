@@ -1,6 +1,22 @@
 body {
     margin-top: 15rem;
+    padding-bottom: 1em;
 }
+body h1 {
+    text-align: center;
+}
+main {
+ margin: 6em 6em 0 6em ;
+ padding-top: 1.5em;
+}
+
+#starship-pick {
+    margin: 5em;
+}
+#intro-form {
+    margin: 5em;
+}
+
 
 #goalTitle {
     display: flex;
@@ -46,14 +62,22 @@ body {
 }
 
 #finishedBox {
-    margin: 6rem;
-    background-color: darkslateblue;
+    padding: 2em;
+    background-color: grey;
+}
+#finishedBox h1 {
+    margin-bottom: -1em;
+}
+#finishedBox img {
+    width: 30%;
+    margin-bottom: 2em;
 }
 
 #welcome1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     font-size: larger;
 }
 
